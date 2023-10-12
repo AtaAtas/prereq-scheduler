@@ -12,15 +12,49 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<div>
+					<div id="head">
 						<div style="float: left; width: 30%;">
 							<a href="https://itu-helper.github.io/home/" class="image avatar"><img src="https://raw.githubusercontent.com/itu-helper/home/main/images/logo.png"
 								class="logo" /></a>
 						</div>
 						<div style="float: right; width: 70%; padding: 1em;">
-							<h1>ITU HELPER</h1>
+							<h1 style="text-align: center;">ITU HELPER</h1>
 							<p style="text-align: center;">Ders Programı Oluştur</p>
 						</div>
+					</div>
+					<div id="content">
+						<form id="scheduleMaker">
+							<fieldset id="formfieldset">
+								<table style="table-layout: fixed">
+									<tr>
+										<th>
+											<label for="courseLabel"
+												style="display: inline; text-align: center">Ders Kodu</label>
+										</th>
+										<th>
+											<label for="courseNum"
+												style="display: inline; text-align: center">Ders İsmi</label>
+										</th>
+									</tr>
+									<tr>
+										<td>
+											<select name="courseLabel" id="courseLabel">
+												<option value="default">-- Seçiniz --</option>
+											</select>
+										</td>
+										<td>
+											<select name="courseNum" id="courseNum">
+												<option value="default">-- Seçiniz --</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+								<input type="button" value="Dersi Ekle" id="submitCourse" />
+							</fieldset>
+						</form>
+					</div>
+					<div>
+						selam
 					</div>
 				</div>
 			</header>
@@ -30,66 +64,114 @@
 
 				<!-- One -->
 					<section id="one">
-						<header class="major">
-							<h2>Ipsum lorem dolor aliquam ante commodo<br />
-							magna sed accumsan arcu neque.</h2>
-						</header>
-						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
+						<h2>Ders Programın</h2>
+						<table class="schedule">
+							<thead>
+								<tr>
+									<th>&nbsp;</th>
+									<th>Pazartesi</th>
+									<th>Salı</th>
+									<th>Çarşamba</th>
+									<th>Perşembe</th>
+									<th>Cuma</th>
+									<th class="optional-day">Cumartesi</th>
+									<th class="optional-day">Pazar</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>08:00 - 08:30</td>
+								</tr>
+								<tr>
+									<td>08:30 - 09:00</td>
+								</tr>
+								<tr>
+									<td>09:00 - 09:30</td>
+								</tr>
+								<tr>
+									<td>09:30 - 10:00</td>
+								</tr>
+								<tr>
+									<td>10:00 - 10:30</td>
+								</tr>
+								<tr>
+									<td>10:30 - 11:00</td>
+								</tr>
+								<tr>
+									<td>11:00 - 11:30</td>
+								</tr>
+								<tr>
+									<td>11:30 - 12:00</td>
+								</tr>
+								<tr>
+									<td>12:00 - 12:30</td>
+								</tr>
+								<tr>
+									<td>12:30 - 13:00</td>
+								</tr>
+								<tr>
+									<td>13:00 - 13:30</td>
+								</tr>
+								<tr>
+									<td>13:30 - 14:00</td>
+								</tr>
+								<tr>
+									<td>14:00 - 14:30</td>
+								</tr>
+								<tr>
+									<td>14:30 - 15:00</td>
+								</tr>
+								<tr>
+									<td>15:00 - 15:30</td>
+								</tr>
+								<tr>
+									<td>15:30 - 16:00</td>
+								</tr>
+								<tr>
+									<td>16:00 - 16:30</td>
+								</tr>
+								<tr>
+									<td>16:30 - 17:00</td>
+								</tr>
+								<tr>
+									<td>17:00 - 17:30</td>
+								</tr>
+								<tr class="optional-time">
+									<td>17:30 - 18:00</td>
+								</tr>
+								<tr class="optional-time">
+									<td>18:00 - 18:30</td>
+								</tr>
+								<tr class="optional-time">
+									<td>18:30 - 19:00</td>
+								</tr>
+								<tr class="optional-time">
+									<td>19:00 - 19:30</td>
+								</tr>
+								<tr class="optional-time">
+									<td>19:30 - 20:00</td>
+								</tr>
+								<tr class="optional-time">
+									<td>20:00 - 20:30</td>
+								</tr>
+								<tr class="optional-time">
+									<td>20:30 - 21:00</td>
+								</tr>
+								<tr class="optional-time">
+									<td>21:00 - 21:30</td>
+								</tr>
+							</tbody>
+						</table>
 					</section>
-
-				<!-- Two -->
-					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>Tortor metus commodo</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
-					</section>
-
 			</div>
 
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
-					<ul class="copyright"><li>-İTÜ'lüler için İTÜ'lülerden-</li></ul>
-					<ul class="copyright"><li>Ata Türkoğlu & Evren Geydirici</li></ul>
-					<ul class="copyright">
-						<li>&copy; Copyright. Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+					<ul class="copyright">-İTÜ'lüler için İTÜ'lülerden-</ul>
+					<ul class="copyright"><a href="https://www.linkedin.com/in/atatrkgl/">Ata Türkoğlu</a> & <a href="https://www.linkedin.com/in/evren-geydirici/">Evren Geydirici</a></ul>
+					<ul class="copyright">&copy; Copyright.</ul>
+					<ul class="copyright">Template by <a href="https://html5up.net">HTML5 UP</a> | Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a></ul>
 				</div>
 			</footer>
 
