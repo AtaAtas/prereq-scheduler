@@ -396,11 +396,13 @@ class PrerequisitoryGrapher {
             if (course == selectiveCourseNode.selectedCourse)
                 dropdown.selectedIndex = i + 1;
         }
-
+        
+        // If dropdown is selected, this will ensure the page will return to the previous scroll position.
         dropdown.onchange = async (_) => {
             // -- Seçiniz --
-            if (dropdown.selectedIndex != 0)
+            if (dropdown.selectedIndex != 0) {
                 selectiveCourseNode.selectedCourse = courseGroup.courses[dropdown.selectedIndex - 1];
+            }
             else
                 selectiveCourseNode.selectedCourse = undefined;
 
@@ -409,11 +411,34 @@ class PrerequisitoryGrapher {
 
             location.href = "#";
             await new Promise(r => setTimeout(r, 300));
-            window.scrollTo({
-                top: startScrollTop,
-                left: 0,
-            });
+                window.scrollTo({
+                    top: startScrollTop,
+                    left: 0,
+                });
         };
+
+        // If dropdown is not selected and user exits via clicking out, this will ensure the page will return to the previous scroll position.
+        // This function for some reason needs two identical await promises in two different points. Without one, it does not work but we don't know which one is for what!
+        // We cannot comprehend the working principles of this abomination. But, what we think it is, is an if statement made with a while loop. 
+        // It does not work with 300 either, has to be 100.
+        // The while loop iterates at max 4-5 times. So it is not a big issue.
+        window.onclick = async (_) => {
+            await new Promise(r => setTimeout(r, 100));
+            var iter_counter = 0;
+            while (document.activeElement.classList.contains("is-article-visible")){
+                iter_counter += 1;
+                await new Promise(r => setTimeout(r, 100));
+                if (!document.activeElement.classList.contains("is-article-visible")){
+                    window.scrollTo({
+                        top: startScrollTop,
+                        left: 0,
+                    });
+                }
+                if (iter_counter > 1)
+                    break
+            }
+            
+        }
     }
 
     onSelectiveNodeClick(node) {
